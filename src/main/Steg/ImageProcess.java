@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 
 public class ImageProcess {
     public BufferedImage fetchImage() throws Exception {
-        BufferedImage img = ImageIO.read(getClass().getResourceAsStream("../tigr.bmp"));
+        BufferedImage img = ImageIO.read(getClass().getResourceAsStream("../Resourсes/img/tigr.bmp"));
         return img;
     }
 
@@ -54,14 +54,14 @@ public class ImageProcess {
 
     void createImgWithMsg(BufferedImage img) {
         try{
-            File ouptut = new File("C:/Users/ms_tu/IdeaProjects/ClassWork3/src/main/new_img.bmp");
+            File ouptut = new File("C:/Users/ms_tu/IdeaProjects/Steganography/src/main/Resourсes/img/new_img.bmp");
             ImageIO.write(img, "bmp", ouptut);
         }
         catch(Exception ex) {}
     }
 
     BufferedImage newImageFetch() {
-        File f = new File("C:/Users/ms_tu/IdeaProjects/ClassWork3/src/main/new_img.bmp");
+        File f = new File("C:/Users/ms_tu/IdeaProjects/Steganography/src/main/Resourсes/img/new_img.bmp");
         BufferedImage img = null;
         try {
             img = ImageIO.read(f);
